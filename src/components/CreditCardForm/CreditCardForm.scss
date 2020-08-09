@@ -3,7 +3,7 @@ form{
   flex-direction: column;
   align-items: center;
   padding: 40px;
-  background-color: rgb(214, 230, 236);
+  background-color: #edf2f4;
   flex: 1 1 300px;
 
   p{
@@ -18,7 +18,17 @@ form{
     margin: 0 0 8px 0;
     padding: 8px;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
+
+    &::placeholder{
+      color: rgb(163, 186, 194);
+    }
+
+    &[type="submit"]{
+      background-color: #699eb3;
+      color: white;
+      font-weight: 500;
+    }
   }
   .image-wrapper{
     width: 300px;
@@ -27,5 +37,10 @@ form{
       display: block;
       max-width: 70%;
     }
+  }
+
+  .error-msg--required{
+    margin: 0 0 16px 0;
+    color: red;
   }
 }
